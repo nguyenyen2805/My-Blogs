@@ -4,7 +4,7 @@ session_start();
 
 
 
-$blog_id = $_GET['blog_id'] ?? null; 
+$blog_id = intval($_GET['blog_id']) ?? null; 
 $user_id = $_SESSION['user_id'] ?? null;
 
 if (empty($blog_id) || empty($user_id) || empty($_COOKIE['username'])) {
